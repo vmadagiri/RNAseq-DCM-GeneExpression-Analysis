@@ -4,9 +4,16 @@ RNA-seq analysis of dilated cardiomyopathy vs control heart samples using GEO da
 # Introduction
 Explain what DCM is and why it is important to study. Talk about mortality rates etc. 
 
+# Research Question
+
+# Hypothesis
+
 # RNA-seq Analysis of Dilated Cardiomyopathy (DCM)
 
 This project analyzes RNA-seq gene expression data from the GEO dataset **GSE141910** to identify differential gene expression between **Dilated Cardiomyopathy (DCM)** and **Non-failing human hearts**. Furthermore, this project will evluate if these transcriptomic differences are **sex-specific**.  
+
+# Dataset
+
 
 ## Methods
 
