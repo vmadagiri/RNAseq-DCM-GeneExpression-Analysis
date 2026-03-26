@@ -1,5 +1,9 @@
 # RNAseq-DCM-GeneExpression-Analysis
 RNA-seq analysis of dilated cardiomyopathy vs control heart samples using GEO dataset GSE141910. Includes PCA, UMAP, volcano plot, and heatmap visualizations in R.
+
+# Introduction
+Explain what DCM is and why it is important to study. Talk about mortality rates etc. 
+
 # RNA-seq Analysis of Dilated Cardiomyopathy (DCM)
 
 This project analyzes RNA-seq gene expression data from the GEO dataset **GSE141910** to identify differential gene expression between **Dilated Cardiomyopathy (DCM)** and **Non-failing human hearts**. Furthermore, this project will evluate if these transcriptomic differences are **sex-specific**.  
