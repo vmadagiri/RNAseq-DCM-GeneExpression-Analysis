@@ -5,6 +5,7 @@ RNA-seq analysis of dilated cardiomyopathy vs control heart samples using GEO da
 Explain what DCM is and why it is important to study. Talk about mortality rates etc. 
 
 # Research Question
+Which genes and molecular pathways differ between males and females with dilated cardiomyopathy (DCM) compared to non-failing hearts?
 
 # Hypothesis
 
