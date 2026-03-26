@@ -2,7 +2,7 @@
 RNA-seq analysis of dilated cardiomyopathy vs control heart samples using GEO dataset GSE141910. Includes PCA, UMAP, volcano plot, and heatmap visualizations in R.
 # RNA-seq Analysis of Dilated Cardiomyopathy (DCM)
 
-This project analyzes RNA-seq gene expression data from the GEO dataset **GSE141910** to identify differential gene expression between **Dilated Cardiomyopathy (DCM)** and **Control heart samples**.
+This project analyzes RNA-seq gene expression data from the GEO dataset **GSE141910** to identify differential gene expression between **Dilated Cardiomyopathy (DCM)** and **Non-failing human hearts**. Furthermore, this project will evluate if these transcriptomic differences are **sex-specific**.  
 
 ## Methods
 
@@ -47,3 +47,6 @@ https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE141910
 
 Vaishnavi Madagiri  
 Bioinformatics Major — Virginia Commonwealth University
+
+Ammar Mohiuddin
+Biology and Bioinformatics Major - Virginia Commonwealth University 
