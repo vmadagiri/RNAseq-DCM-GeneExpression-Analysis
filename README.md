@@ -14,7 +14,9 @@ DCM hearts exhibit distinct gene expression and pathway profiles compared to non
 
 This project analyzes RNA-seq gene expression data from the GEO dataset **GSE141910** to identify differential gene expression between **Dilated Cardiomyopathy (DCM)** and **Non-failing human hearts**. Furthermore, this project will evluate if these transcriptomic differences are **sex-specific**.  
 
-# Dataset: RNA sequencing of the left ventricle from non-failing donors and heart failure samples from the MAGNet consortium
+# Dataset: GSE141910
+
+**RNA sequencing of the left ventricle from non-failing donors and heart failure samples from the MAGNet consortium**
 
 Human left ventricular RNA-seq data. Includes non-failing hearts and multiple cardiomyopathy subtypes (including DCM)
 n = 305
