@@ -28,6 +28,9 @@ n = 305
     - 61 Females
 - Overall sex distribution:
     - 53% Male / 47% Female
+ 
+**GEO Accession:**
+https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE141910
 
 
 ## Methods
@@ -41,11 +44,6 @@ The analysis pipeline includes:
 - Differential gene expression analysis using **limma**
 - Volcano plot visualization
 - Heatmap of top differentially expressed genes
-
-## Dataset
-
-GEO Accession:  
-https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE141910
 
 ## Visualizations
 
