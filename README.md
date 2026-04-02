@@ -54,7 +54,7 @@ The analysis pipeline includes:
 ![PCA](PCA_GSE141910.png)
 
 ### UMAP Plot
-![UMAP](UMAP_GSE141910.png)
+![UMAP](Heatmap_GSE141910.jpg)
 
 ### Volcano Plot
 ![Volcano](Volcano_GSE141910.png)
