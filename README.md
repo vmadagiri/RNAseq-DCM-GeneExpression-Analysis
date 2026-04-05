@@ -54,13 +54,13 @@ The analysis pipeline includes:
 ## Visualizations
 
 ### PCA Plot
-![PCA Plot](Pca.png)
+![PCA Plot](PCAplot.jpg)
 
 ### UMAP Plot
 ![UMAP](UMAPplot.jpg)
 
 ### Volcano Plot
-![Volcano](Volcano_GSE141910.png)
+![Volcano](VolcanoPlot.png)
 
 ### Heatmap
 ![Heatmap](Heatmap_GSE141910.jpg)
