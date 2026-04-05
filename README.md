@@ -54,7 +54,7 @@ The analysis pipeline includes:
 ## Visualizations
 
 ### PCA Plot
-![PCA Plot](PCA.png)
+![PCA Plot](Downloads/PCA.png)
 
 ### UMAP Plot
 ![UMAP](Heatmap_GSE141910.jpg)
@@ -78,11 +78,11 @@ The analysis pipeline includes:
 Vaishnavi Madagiri  
 Bioinformatics Major — Virginia Commonwealth University
 
-Ammar Mohiuddin
+Ammar Mohiuddin     
 Biology and Bioinformatics Major - Virginia Commonwealth University 
 
-Harrish Ganesh
+Harrish Ganesh     
 Biology and Bioinformatics Major - Virginia Commonwealth University 
 
-Haneia Nemati
+Haneia Nemati     
 Bioinformatics Major - Virginia Commonwealth University
