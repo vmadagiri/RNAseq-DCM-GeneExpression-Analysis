@@ -63,7 +63,7 @@ The analysis pipeline includes:
 ![Volcano](Volcano_GSE141910.png)
 
 ### Heatmap
-![Heatmap](Heatmap_GSE141910.jpg)
+![Heatmap](Downloads/Heatmap_GSE141910.jpg)
 
 ## Tools Used
 
