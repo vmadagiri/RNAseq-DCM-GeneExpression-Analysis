@@ -54,7 +54,7 @@ The analysis pipeline includes:
 ## Visualizations
 
 ### PCA Plot
-![PCA Plot](Screenshot%202026-04-05%20at%203.15.35%E2%80%AFPM.png)
+![PCA Plot](PCA.png)
 
 ### UMAP Plot
 ![UMAP](Heatmap_GSE141910.jpg)
