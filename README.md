@@ -54,7 +54,7 @@ The analysis pipeline includes:
 ## Visualizations
 
 ### PCA Plot
-![PCA](PCA_GSE141910.png)
+![PCA Plot](Screenshot%202026-04-05%20at%203.15.35%E2%80%AFPM.png)
 
 ### UMAP Plot
 ![UMAP](Heatmap_GSE141910.jpg)
@@ -80,3 +80,9 @@ Bioinformatics Major — Virginia Commonwealth University
 
 Ammar Mohiuddin
 Biology and Bioinformatics Major - Virginia Commonwealth University 
+
+Harrish Ganesh
+Biology and Bioinformatics Major - Virginia Commonwealth University 
+
+Haneia Nemati
+Bioinformatics Major - Virginia Commonwealth University
