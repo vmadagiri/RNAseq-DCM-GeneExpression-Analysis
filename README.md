@@ -67,18 +67,22 @@ The analysis pipeline includes:
 ### PCA Plot
 
 ![PCA](PCA Plot - Sex Comparison.png)
+<img width="1552" height="1222" alt="PCA Plot - Sex Comparison" src="https://github.com/user-attachments/assets/57057b5e-1f44-4a9c-82cc-851477eac122" />
 
 ### UMAP Plot
 
 ![UMAP](UMAP Plot - Sex Comparison.png)
+<img width="1552" height="1222" alt="UMAP Plot - Sex Comparison" src="https://github.com/user-attachments/assets/6d7b422a-15db-481b-9550-0d09f0ed4262" />
 
 ### Volcano Plot (Female vs Male DCM)
 
 ![Volcano](Volcano Plot - Female vs Male DCM.png)
+<img width="1552" height="1222" alt="Volcano Plot - Female vs Male DCM" src="https://github.com/user-attachments/assets/187b8d0e-1e44-4dbb-bd6b-251c8d770b3c" />
 
 ### PC1 Distribution
 
 ![PC1](PC1 Distribution by Group.png)
+<img width="1552" height="1222" alt="PC1 Distribution by Group" src="https://github.com/user-attachments/assets/e27a32a3-c3c7-42a1-961b-8663568651e3" />
 
 ---
 
