@@ -79,6 +79,13 @@ The analysis pipeline includes:
 ![Volcano](Volcano Plot - Female vs Male DCM.png)
 <img width="1552" height="1222" alt="Volcano Plot - Female vs Male DCM" src="https://github.com/user-attachments/assets/187b8d0e-1e44-4dbb-bd6b-251c8d770b3c" />
 
+### Volcano Plot (Female vs Male Control)
+
+![Volcano](Vo<img width="1552" height="1222" alt="Rplot" src="https://github.com/user-attachments/assets/2b3385cd-bf17-4751-ad6c-1435dd842458" />
+lcano Plot - Female vs Male control.png)
+
+![Uploading Rplot.png…]()
+
 ### PC1 Distribution
 
 ![PC1](PC1 Distribution by Group.png)
