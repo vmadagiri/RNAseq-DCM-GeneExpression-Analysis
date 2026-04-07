@@ -81,8 +81,8 @@ The analysis pipeline includes:
 
 ### Volcano Plot (Female vs Male Control)
 
-![Volcano](Vo<img width="1552" height="1222" alt="Rplot" src="https://github.com/user-attachments/assets/2b3385cd-bf17-4751-ad6c-1435dd842458" />
-lcano Plot - Female vs Male control.png)
+![Volcano](Volcano Plot - Female vs Male control.png)<img width="1552" height="1222" alt="Rplot" src="https://github.com/user-attachments/assets/2b3385cd-bf17-4751-ad6c-1435dd842458" />
+
 
 ![Uploading Rplot.png…]()
 
