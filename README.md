@@ -108,6 +108,20 @@ KEGG enrichment analysis was performed on significantly differentially expressed
 
 ---
 
+## Discussion
+
+The results from this analysis show that gene expression patterns in DCM differ from non-failing hearts, although the separation is not completely clear. In the PCA plot, there is some overlap between groups, which suggests that disease status is not the only factor influencing gene expression. This makes sense given how complex DCM is and how much variability exists between patients.
+
+The UMAP plot shows slightly clearer clustering compared to PCA, which suggests that there may be nonlinear patterns in the data that PCA is not capturing as well. Even so, the groups are still not perfectly separated, reinforcing the idea that multiple factors are contributing to the observed variation.
+
+The differential expression results highlight genes that are upregulated and downregulated in DCM. Many of these genes are likely involved in processes such as inflammation and cardiac remodeling, which are commonly associated with heart failure. This aligns with what is already known about the disease.
+
+There also appear to be differences between male and female samples, although these differences are not extremely distinct. This suggests that sex may play a role in how DCM develops or progresses, but it is probably not the only factor. More focused analysis would be needed to better understand these differences.
+
+Overall, the results suggest that DCM is associated with measurable changes in gene expression, but the patterns are complex and not driven by a single variable. This highlights the importance of considering multiple biological and clinical factors when studying the disease.
+
+---
+
 ## Tools Used
 
 * R
@@ -117,6 +131,21 @@ KEGG enrichment analysis was performed on significantly differentially expressed
 * org.Hs.eg.db
 * umap
 * data.table
+
+---
+
+## Limitations
+
+* This analysis uses bulk RNA-seq data, so it doesn’t tell us which specific cell types the gene expression changes are coming from
+*  There is a lot of variability between patients (like disease stage or treatment history), and that isn’t fully accounted for here
+*  The sample sizes between groups aren’t perfectly balanced, which could affect some of the comparisons
+*  All results are based on a single dataset, so they would need to be validated using additional datasets to confirm the findings  
+
+---
+
+## Conclusion
+
+This study demonstrates that DCM is associated with meaningful transcriptomic changes, particularly in pathways related to inflammation and remodeling. The observed sex-specific differences suggest that personalized approaches may be important in understanding and treating the disease.
 
 ---
 
