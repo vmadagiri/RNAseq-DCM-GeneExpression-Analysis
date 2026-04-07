@@ -279,4 +279,78 @@ par(xpd = FALSE)
 dev.copy(png, file.path(output_folder, "Volcano_Male_vs_Female_DCM_GSE141910.png"), width = 1800, height = 1000, res = 180)
 dev.off()
 
+dev.copy(png, file.path(output_folder, "Volcano_Male_vs_Female_DCM_GSE141910.png"), width = 1800, height = 1000, res = 180)
+dev.off()
+
+# -------------------------
+# ADD YOUR NEW CONTROL VOLCANO CODE HERE
+# -------------------------
+
+control_only <- meta_sex$Condition == "Control"
+dat_control <- dat_sex[, control_only]
+meta_control <- meta_sex[control_only, ]
+
+meta_control$Sex <- factor(meta_control$Sex, levels = c("Male", "Female"))
+
+design_control <- model.matrix(~ meta_control$Sex)
+fit_control <- lmFit(dat_control, design_control)
+fit_control <- eBayes(fit_control)
+
+topGenes_control <- topTable(fit_control, coef = 2, number = Inf)
+
+volcano_control_df <- topGenes_control
+volcano_control_df$adj.P.Val[is.na(volcano_control_df$adj.P.Val)] <- 1
+volcano_control_df$adj.P.Val[volcano_control_df$adj.P.Val <= 0] <- 1e-300
+volcano_control_df$negLogAdjP <- -log10(volcano_control_df$adj.P.Val)
+
+volcano_control_df$Significance <- "Not Significant"
+volcano_control_df$Significance[volcano_control_df$adj.P.Val < 0.05 & volcano_control_df$logFC > 1] <- "Upregulated"
+volcano_control_df$Significance[volcano_control_df$adj.P.Val < 0.05 & volcano_control_df$logFC < -1] <- "Downregulated"
+
+volcano_control_df$Color <- "grey"
+volcano_control_df$Color[volcano_control_df$Significance == "Upregulated"] <- "red"
+volcano_control_df$Color[volcano_control_df$Significance == "Downregulated"] <- "blue"
+
+y_max_control <- max(volcano_control_df$negLogAdjP, na.rm = TRUE)
+y_pad_control <- 0.08 * y_max_control
+
+par(mar = c(5, 5, 4, 11))
+plot(
+  volcano_control_df$logFC,
+  volcano_control_df$negLogAdjP,
+  col = volcano_control_df$Color,
+  pch = 19,
+  cex = 0.65,
+  ylim = c(0, y_max_control + y_pad_control),
+  xlab = "log Fold Change",
+  ylab = "-log10 Adjusted P-value",
+  main = "Volcano Plot - Female vs Male Control"
+)
+
+abline(h = -log10(0.05), col = "darkgreen", lty = 2, lwd = 1.5)
+abline(v = c(-1, 1), col = "darkgreen", lty = 2, lwd = 1.5)
+
+par(xpd = TRUE)
+legend(
+  "topright",
+  inset = c(-0.28, 0),
+  legend = c("Upregulated", "Downregulated", "Not Significant"),
+  col = c("red", "blue", "grey"),
+  pch = 19,
+  cex = 0.85,
+  bty = "n"
+)
+par(xpd = FALSE)
+
+dev.copy(
+  png,
+  file.path(output_folder, "Volcano_Control_Sex_Comparison_GSE141910.png"),
+  width = 1800,
+  height = 1000,
+  res = 180
+)
+dev.off()
+
+list.files(output_folder)
+
 list.files(output_folder)
