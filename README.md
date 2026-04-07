@@ -66,7 +66,7 @@ The analysis pipeline includes:
 
 ### PCA Plot
 
-![PCA](PCAplot.png)
+![PCA](PCAplot.jpg)
 
 ### UMAP Plot
 
