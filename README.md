@@ -66,7 +66,7 @@ The analysis pipeline includes:
 
 ### PCA Plot
 
-![PCA](PCA Plot - Sex Comparison.png)
+![PCA](PCAplot.png)
 
 ### UMAP Plot
 
