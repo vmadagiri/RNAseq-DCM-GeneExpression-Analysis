@@ -1,88 +1,131 @@
 # RNAseq-DCM-GeneExpression-Analysis
-RNA-seq analysis of dilated cardiomyopathy (DCM) vs control heart samples using GEO dataset GSE141910. Includes PCA, UMAP, volcano plot, and heatmap visualizations in R.
 
-# Introduction
-Dilated cardiomyopathy (DCM) is a condition in which the heart becomes enlarged and weakened, reducing its ability to pump blood effectively. As the left ventricle dilates, the force of contraction decreases, leading to impaired circulation of oxygen-rich blood throughout the body. Over time, this can progress to systolic heart failure, where the heart is no longer able to meet the body’s demands. DCM is one of the leading causes of heart failure worldwide and is a major reason for heart transplantation. Unlike many cardiovascular diseases, it can affect individuals at relatively young ages, not just older adults, making its impact particularly significant.
+### RNA-seq Analysis using GSE141910
 
-Once symptoms begin to appear, the disease can progress rapidly in some patients. Individuals with DCM are at increased risk for complications such as fluid overload, reduced exercise tolerance, and dangerous arrhythmias. These arrhythmias can lead to sudden cardiac death, even in patients who may not have severe symptoms beforehand. Mortality rates remain high, especially in cases where diagnosis is delayed or access to advanced therapies is limited. Because of its severity, variability in progression, and impact on quality of life, DCM continues to be an important focus of both clinical and translational research.
+Exploring gene expression differences in dilated cardiomyopathy (DCM) with a focus on sex-specific effects
 
-The causes of DCM are complex and often multifactorial. Genetic mutations affecting structural proteins of the heart muscle are a major contributor, but environmental factors such as viral infections, toxins, and chronic conditions like hypertension can also play a role. In many cases, the exact cause remains unknown, which limits the ability to predict disease progression or develop targeted therapies. This uncertainty highlights the need for research that goes beyond clinical presentation and examines the underlying biological mechanisms driving the disease.
+---
 
-In this project, we focus on understanding DCM at the molecular level using RNA sequencing (RNA-seq) data. Rather than only observing clinical outcomes, this approach allows us to analyze gene expression patterns in heart tissue and identify which genes and pathways are altered in DCM compared to non-failing hearts. By examining differential gene expression, we can uncover key biological processes such as inflammation, metabolic dysfunction, and structural remodeling that contribute to disease progression. Overall, this project aims to provide deeper insight into the molecular basis of DCM and support future efforts toward more precise, targeted, and personalized treatment strategies.
+## Introduction
 
-# Research Question
+Dilated cardiomyopathy (DCM) is a condition where the heart becomes enlarged and weakened, reducing its ability to pump blood effectively. This can lead to heart failure, arrhythmias, and in severe cases, sudden cardiac death. DCM is one of the leading causes of heart transplantation and can affect individuals at relatively young ages.
+
+The causes of DCM are complex and include genetic mutations, environmental factors, and unknown contributors. Because of this, studying the disease at the molecular level is important for understanding what is actually happening inside the heart.
+
+This project uses RNA-seq data to analyze gene expression changes in DCM compared to non-failing hearts. In addition, this project specifically explores whether these changes differ between males and females.
+
+---
+
+## Research Question
+
 Which genes and molecular pathways differ between males and females with dilated cardiomyopathy (DCM) compared to non-failing hearts?
 
-# Hypothesis
-DCM hearts exhibit distinct gene expression and pathway profiles compared to non-failing hearts, characterized by increased inflammatory signaling and activation of cardiac remodeling programs, with these effects being more pronounced in males than in females. 
+---
 
-# RNA-seq Analysis of Dilated Cardiomyopathy (DCM)
+## Hypothesis
 
-This project analyzes RNA-seq gene expression data from the GEO dataset **GSE141910** to identify differential gene expression between **Dilated Cardiomyopathy (DCM)** and **Non-failing human hearts**. Furthermore, this project will evluate if these transcriptomic differences are **sex-specific**.  
+DCM hearts show distinct gene expression and pathway changes compared to non-failing hearts, with stronger inflammatory and remodeling signals. These effects are expected to differ between males and females.
 
-# Dataset: GSE141910
+---
 
-**RNA sequencing of the left ventricle from non-failing donors and heart failure samples from the MAGNet consortium**
+## Dataset: GSE141910
 
-Human left ventricular RNA-seq data. Includes non-failing hearts and multiple cardiomyopathy subtypes (including DCM)
-n = 305
-- 152 patients with non-failing donors
-    - 70 Males
-    - 82 Females
-- 153 patients with dilated cardiomyopathy
-    - 92 Males
-    - 61 Females
-- Overall sex distribution:
-    - 53% Male / 47% Female
- 
-**GEO Accession:**
+RNA sequencing of the left ventricle from non-failing donors and heart failure samples from the MAGNet consortium.
+
+* Total samples: 305
+* Non-failing: 152
+
+  * 70 males
+  * 82 females
+* DCM: 153
+
+  * 92 males
+  * 61 females
+
+GEO Accession:
 https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE141910
 
+---
 
 ## Methods
 
 The analysis pipeline includes:
 
-- Data filtering of low-count genes
-- Log transformation of counts
-- Principal Component Analysis (PCA)
-- UMAP dimensionality reduction
-- Differential gene expression analysis using **limma**
-- Volcano plot visualization
-- Heatmap of top differentially expressed genes
+* Filtering low-count genes
+* Log transformation of counts
+* Principal Component Analysis (PCA)
+* UMAP clustering
+* Differential gene expression using limma
+* Volcano plot visualization
+* Sex-based comparison of DCM samples
+* KEGG pathway enrichment analysis
+
+---
 
 ## Visualizations
 
 ### PCA Plot
-![PCA Plot](PCAplot.jpg)
+
+![PCA](PCA Plot - Sex Comparison.png)
 
 ### UMAP Plot
-![UMAP](UMAPplot.jpg)
 
-### Volcano Plot
-![Volcano](VolcanoPlot.png)
+![UMAP](UMAP Plot - Sex Comparison.png)
 
-### Heatmap
-![Heatmap](Heatmap_GSE141910.jpg)
+### Volcano Plot (Female vs Male DCM)
+
+![Volcano](Volcano Plot - Female vs Male DCM.png)
+
+### PC1 Distribution
+
+![PC1](PC1 Distribution by Group.png)
+
+---
+
+## 🧬 KEGG Pathway Analysis
+
+KEGG enrichment analysis was performed on significantly differentially expressed genes to understand biological pathways involved in sex differences in DCM.
+
+### KEGG Summary Barplot
+
+![KEGG](sex_differences_analysis/KEGG_Summary_Barplot.png)
+
+*Barplot showing enriched pathways related to inflammation and metabolic processes in male vs female DCM samples.*
+
+---
+
+## 🔬 Key Findings
+
+* DCM samples separate clearly from controls in PCA and UMAP
+* There are noticeable gene expression differences between male and female DCM hearts
+* Several genes are significantly upregulated in DCM
+* KEGG analysis highlights pathways related to inflammation and metabolism
+* These results suggest sex-specific biological differences in DCM progression
+
+---
 
 ## Tools Used
 
-- R
-- GEOquery
-- limma
-- umap
-- data.table
+* R
+* GEOquery
+* limma
+* clusterProfiler
+* org.Hs.eg.db
+* umap
+* data.table
+
+---
 
 ## Author
 
-Vaishnavi Madagiri  
+Vaishnavi Madagiri
 Bioinformatics Major — Virginia Commonwealth University
 
-Ammar Mohiuddin     
-Biology and Bioinformatics Major - Virginia Commonwealth University 
+Ammar Mohiuddin
+Biology and Bioinformatics — Virginia Commonwealth University
 
-Harrish Ganesh     
-Biology and Bioinformatics Major - Virginia Commonwealth University 
+Harrish Ganesh
+Biology and Bioinformatics — Virginia Commonwealth University
 
-Haneia Nemati     
-Bioinformatics Major - Virginia Commonwealth University
+Haneia Nemati
+Bioinformatics — Virginia Commonwealth University
