@@ -14,8 +14,6 @@ The causes of DCM are complex and include genetic mutations, environmental facto
 
 This project uses RNA-seq data to analyze gene expression changes in DCM compared to non-failing hearts. In addition, this project specifically explores whether these changes differ between males and females.
 
-Hello
-
 ---
 
 ## Research Question
