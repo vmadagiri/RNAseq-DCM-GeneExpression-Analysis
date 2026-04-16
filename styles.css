@@ -1,0 +1,142 @@
+body {
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  background: #f5f7fb;
+  color: #2f4156;
+  line-height: 1.75;
+  font-size: 17px;
+}
+
+/* top navbar */
+.navbar {
+  background: #ffffff !important;
+  border-bottom: 1px solid #e7edf5;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+  color: #1d3f6e !important;
+  font-weight: 600;
+}
+
+/* banner */
+.quarto-title-banner {
+  background: linear-gradient(135deg, #eef4fb 0%, #f7f9fd 65%, #eef2f8 100%);
+  border-bottom: 1px solid #e3eaf3;
+  padding-top: 2.5rem !important;
+  padding-bottom: 2.5rem !important;
+}
+
+.quarto-title .title {
+  text-align: center;
+  font-size: 2.7rem;
+  font-weight: 800;
+  color: #1d3f6e;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.7rem;
+}
+
+.quarto-title .subtitle,
+.quarto-title p {
+  text-align: center;
+  max-width: 850px;
+  margin: 0 auto;
+  font-size: 1.15rem;
+  color: #536b85;
+}
+
+/* main card */
+main.content {
+  background: #ffffff;
+  max-width: 980px;
+  margin: 2rem auto;
+  padding: 2.5rem 3rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 26px rgba(15, 35, 55, 0.07);
+  border: 1px solid #e8eef5;
+}
+
+/* headings */
+h1, h2, h3 {
+  color: #1d3f6e;
+  font-weight: 750;
+}
+
+h2 {
+  margin-top: 2.6rem;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  border-bottom: 2px solid #e6edf5;
+  padding-bottom: 0.45rem;
+}
+
+h3 {
+  margin-top: 1.7rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.25rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+ul, ol {
+  margin-bottom: 1.2rem;
+}
+
+li {
+  margin-bottom: 0.35rem;
+}
+
+/* images */
+img {
+  display: block;
+  max-width: 88%;
+  margin: 1.5rem auto;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(20, 40, 70, 0.10);
+  border: 1px solid #e4ebf3;
+  background: white;
+  padding: 0.35rem;
+}
+
+/* contents box */
+#TOC,
+.sidebar nav[role="doc-toc"] {
+  background: #ffffff;
+  border: 1px solid #e5ebf3;
+  border-radius: 16px;
+  padding: 1rem 1.1rem;
+  box-shadow: 0 6px 18px rgba(15, 35, 55, 0.05);
+}
+
+#TOC .nav-link.active,
+.sidebar .nav-link.active {
+  color: #2a66a3;
+  font-weight: 700;
+}
+
+a {
+  color: #2a66a3;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .quarto-title .title {
+    font-size: 2rem;
+  }
+
+  main.content {
+    margin: 1rem;
+    padding: 1.4rem;
+    border-radius: 14px;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
