@@ -89,8 +89,8 @@ meta_sex$Condition <- factor(meta_sex$Condition, levels = c("Control", "DCM"))
 group_colors <- c(
   "Male_Control" = "blue",
   "Female_Control" = "deeppink",
-  "Male_DCM" = "green",
-  "Female_DCM" = "yellow"
+  "Male_DCM" = "darkgreen",
+  "Female_DCM" = "gold2"
 )
 
 sex_colors <- c(
@@ -412,16 +412,15 @@ heatmap(
   labRow = FALSE,
   labCol = FALSE,
   margins = c(5, 5),
-  col = colorRampPalette(c("navy", "white", "firebrick3"))(75),
+  col = colorRampPalette(c("blue", "white", "deeppink"))(75),
   main = "Heatmap - Top DCM Sex Difference Genes"
 )
 
 legend(
   "topright",
   legend = c("Male DCM", "Female DCM"),
-  fill = c("#0033ff", "#ff1493"),
+  fill = c("blue", "deeppink"),
   cex = 0.85,
-
   bty = "n"
 )
 
