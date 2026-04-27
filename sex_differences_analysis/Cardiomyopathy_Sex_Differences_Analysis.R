@@ -283,7 +283,7 @@ dev.copy(png, file.path(output_folder, "Volcano_Male_vs_Female_DCM_GSE141910.png
 dev.off()
 
 # -------------------------
-# ADD YOUR NEW CONTROL VOLCANO CODE HERE
+# NEW CONTROL VOLCANO
 # -------------------------
 
 control_only <- meta_sex$Condition == "Control"
