@@ -1,0 +1,11 @@
+Fresh KEGG Analysis Summary
+Comparison: Female DCM vs Male DCM
+Gene cutoff used: adj.P.Val < 0.05
+Total genes tested: 25880
+Genes selected for KEGG: 151
+Universe genes: 25880
+Universe genes found in KEGG: 7586
+Significant genes found in KEGG: 37
+KEGG pathways with overlap: 81
+FDR-significant KEGG pathways: 0
+Nominally significant KEGG pathways: 5
