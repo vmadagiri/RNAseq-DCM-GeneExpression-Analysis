@@ -17,9 +17,6 @@ website:
 format:
   html:
     theme: cosmo
-    css: styles.css
     toc: true
-    toc-location: right
-    page-layout: full
-
+    number-sections: true
 

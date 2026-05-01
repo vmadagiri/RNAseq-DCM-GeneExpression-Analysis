@@ -70,7 +70,6 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -113,7 +112,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
@@ -121,34 +120,34 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#research-question" id="toc-research-question" class="nav-link" data-scroll-target="#research-question">Research Question</a></li>
-  <li><a href="#hypothesis" id="toc-hypothesis" class="nav-link" data-scroll-target="#hypothesis">Hypothesis</a></li>
-  <li><a href="#dataset-gse141910" id="toc-dataset-gse141910" class="nav-link" data-scroll-target="#dataset-gse141910">Dataset: GSE141910</a></li>
-  <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods">Methods</a></li>
-  <li><a href="#visualizations" id="toc-visualizations" class="nav-link" data-scroll-target="#visualizations">Visualizations</a>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a></li>
+  <li><a href="#research-question" id="toc-research-question" class="nav-link" data-scroll-target="#research-question"><span class="header-section-number">2</span> Research Question</a></li>
+  <li><a href="#hypothesis" id="toc-hypothesis" class="nav-link" data-scroll-target="#hypothesis"><span class="header-section-number">3</span> Hypothesis</a></li>
+  <li><a href="#dataset-gse141910" id="toc-dataset-gse141910" class="nav-link" data-scroll-target="#dataset-gse141910"><span class="header-section-number">4</span> Dataset: GSE141910</a></li>
+  <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods"><span class="header-section-number">5</span> Methods</a></li>
+  <li><a href="#visualizations" id="toc-visualizations" class="nav-link" data-scroll-target="#visualizations"><span class="header-section-number">6</span> Visualizations</a>
   <ul class="collapse">
-  <li><a href="#pca-plot---sex-comparison" id="toc-pca-plot---sex-comparison" class="nav-link" data-scroll-target="#pca-plot---sex-comparison">PCA Plot - Sex Comparison</a></li>
-  <li><a href="#umap-plot---sex-comparison" id="toc-umap-plot---sex-comparison" class="nav-link" data-scroll-target="#umap-plot---sex-comparison">UMAP Plot - Sex Comparison</a></li>
-  <li><a href="#volcano-plot---female-vs-male-dcm" id="toc-volcano-plot---female-vs-male-dcm" class="nav-link" data-scroll-target="#volcano-plot---female-vs-male-dcm">Volcano Plot - Female vs Male DCM</a></li>
-  <li><a href="#volcano-plot---female-vs-male-control" id="toc-volcano-plot---female-vs-male-control" class="nav-link" data-scroll-target="#volcano-plot---female-vs-male-control">Volcano Plot - Female vs Male Control</a></li>
-  <li><a href="#pc1-distribution" id="toc-pc1-distribution" class="nav-link" data-scroll-target="#pc1-distribution">PC1 Distribution</a></li>
+  <li><a href="#pca-plot---sex-comparison" id="toc-pca-plot---sex-comparison" class="nav-link" data-scroll-target="#pca-plot---sex-comparison"><span class="header-section-number">6.1</span> PCA Plot - Sex Comparison</a></li>
+  <li><a href="#umap-plot---sex-comparison" id="toc-umap-plot---sex-comparison" class="nav-link" data-scroll-target="#umap-plot---sex-comparison"><span class="header-section-number">6.2</span> UMAP Plot - Sex Comparison</a></li>
+  <li><a href="#volcano-plot---female-vs-male-dcm" id="toc-volcano-plot---female-vs-male-dcm" class="nav-link" data-scroll-target="#volcano-plot---female-vs-male-dcm"><span class="header-section-number">6.3</span> Volcano Plot - Female vs Male DCM</a></li>
+  <li><a href="#volcano-plot---female-vs-male-control" id="toc-volcano-plot---female-vs-male-control" class="nav-link" data-scroll-target="#volcano-plot---female-vs-male-control"><span class="header-section-number">6.4</span> Volcano Plot - Female vs Male Control</a></li>
+  <li><a href="#pc1-distribution" id="toc-pc1-distribution" class="nav-link" data-scroll-target="#pc1-distribution"><span class="header-section-number">6.5</span> PC1 Distribution</a></li>
   </ul></li>
-  <li><a href="#kegg-pathway-analysis" id="toc-kegg-pathway-analysis" class="nav-link" data-scroll-target="#kegg-pathway-analysis">KEGG Pathway Analysis</a>
+  <li><a href="#kegg-pathway-analysis" id="toc-kegg-pathway-analysis" class="nav-link" data-scroll-target="#kegg-pathway-analysis"><span class="header-section-number">7</span> KEGG Pathway Analysis</a>
   <ul class="collapse">
-  <li><a href="#kegg-summary-barplot" id="toc-kegg-summary-barplot" class="nav-link" data-scroll-target="#kegg-summary-barplot">KEGG Summary Barplot</a></li>
+  <li><a href="#kegg-summary-barplot" id="toc-kegg-summary-barplot" class="nav-link" data-scroll-target="#kegg-summary-barplot"><span class="header-section-number">7.1</span> KEGG Summary Barplot</a></li>
   </ul></li>
-  <li><a href="#key-findings" id="toc-key-findings" class="nav-link" data-scroll-target="#key-findings">Key Findings</a></li>
-  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion">Discussion</a></li>
-  <li><a href="#tools-used" id="toc-tools-used" class="nav-link" data-scroll-target="#tools-used">Tools Used</a></li>
-  <li><a href="#limitations" id="toc-limitations" class="nav-link" data-scroll-target="#limitations">Limitations</a></li>
-  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
-  <li><a href="#authors" id="toc-authors" class="nav-link" data-scroll-target="#authors">Authors</a></li>
+  <li><a href="#key-findings" id="toc-key-findings" class="nav-link" data-scroll-target="#key-findings"><span class="header-section-number">8</span> Key Findings</a></li>
+  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion"><span class="header-section-number">9</span> Discussion</a></li>
+  <li><a href="#tools-used" id="toc-tools-used" class="nav-link" data-scroll-target="#tools-used"><span class="header-section-number">10</span> Tools Used</a></li>
+  <li><a href="#limitations" id="toc-limitations" class="nav-link" data-scroll-target="#limitations"><span class="header-section-number">11</span> Limitations</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">12</span> Conclusion</a></li>
+  <li><a href="#authors" id="toc-authors" class="nav-link" data-scroll-target="#authors"><span class="header-section-number">13</span> Authors</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -158,7 +157,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="quarto-title-meta column-page-left">
+<div class="quarto-title-meta">
 
     
   
@@ -170,22 +169,22 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<section id="introduction" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">1</span> Introduction</h2>
 <p>Dilated cardiomyopathy (DCM) is a condition where the heart becomes enlarged and weakened, reducing its ability to pump blood effectively. This can lead to heart failure, arrhythmias, and in severe cases, sudden cardiac death. DCM is one of the leading causes of heart transplantation and can affect individuals at relatively young ages.</p>
 <p>The causes of DCM are complex and include genetic mutations, environmental factors, and unknown contributors. Because of this, studying the disease at the molecular level is important for understanding what is actually happening inside the heart.</p>
 <p>This project uses RNA-seq data to analyze gene expression changes in DCM compared to non-failing hearts. In addition, this project specifically explores whether these changes differ between males and females.</p>
 </section>
-<section id="research-question" class="level2">
-<h2 class="anchored" data-anchor-id="research-question">Research Question</h2>
+<section id="research-question" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="research-question"><span class="header-section-number">2</span> Research Question</h2>
 <p>Which genes and molecular pathways differ between males and females with dilated cardiomyopathy (DCM) compared to non-failing hearts?</p>
 </section>
-<section id="hypothesis" class="level2">
-<h2 class="anchored" data-anchor-id="hypothesis">Hypothesis</h2>
+<section id="hypothesis" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="hypothesis"><span class="header-section-number">3</span> Hypothesis</h2>
 <p>DCM hearts show distinct gene expression and pathway changes compared to non-failing hearts, with stronger inflammatory and remodeling signals. These effects are expected to differ between males and females.</p>
 </section>
-<section id="dataset-gse141910" class="level2">
-<h2 class="anchored" data-anchor-id="dataset-gse141910">Dataset: GSE141910</h2>
+<section id="dataset-gse141910" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="dataset-gse141910"><span class="header-section-number">4</span> Dataset: GSE141910</h2>
 <p>RNA sequencing of the left ventricle from non-failing donors and heart failure samples from the MAGNet consortium.</p>
 <p>Total samples: 305</p>
 <p>Non-failing: 152</p>
@@ -196,8 +195,8 @@ ul.task-list li input[type="checkbox"] {
 61 females</p>
 <p>GEO Accession: <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE141910" class="uri">https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE141910</a></p>
 </section>
-<section id="methods" class="level2">
-<h2 class="anchored" data-anchor-id="methods">Methods</h2>
+<section id="methods" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="methods"><span class="header-section-number">5</span> Methods</h2>
 <p>The analysis pipeline includes:</p>
 <ul>
 <li>Filtering low-count genes</li>
@@ -210,10 +209,10 @@ ul.task-list li input[type="checkbox"] {
 <li>KEGG pathway enrichment analysis</li>
 </ul>
 </section>
-<section id="visualizations" class="level2">
-<h2 class="anchored" data-anchor-id="visualizations">Visualizations</h2>
-<section id="pca-plot---sex-comparison" class="level3">
-<h3 class="anchored" data-anchor-id="pca-plot---sex-comparison">PCA Plot - Sex Comparison</h3>
+<section id="visualizations" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="visualizations"><span class="header-section-number">6</span> Visualizations</h2>
+<section id="pca-plot---sex-comparison" class="level3" data-number="6.1">
+<h3 data-number="6.1" class="anchored" data-anchor-id="pca-plot---sex-comparison"><span class="header-section-number">6.1</span> PCA Plot - Sex Comparison</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/PCA Plot - Sex Comparison.png" class="img-fluid figure-img"></p>
@@ -222,8 +221,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p>This PCA plot compares control and DCM samples by sex. It shows partial separation between disease groups, but there is still overlap between male and female samples, suggesting that sex-specific differences are present but not dominant.</p>
 </section>
-<section id="umap-plot---sex-comparison" class="level3">
-<h3 class="anchored" data-anchor-id="umap-plot---sex-comparison">UMAP Plot - Sex Comparison</h3>
+<section id="umap-plot---sex-comparison" class="level3" data-number="6.2">
+<h3 data-number="6.2" class="anchored" data-anchor-id="umap-plot---sex-comparison"><span class="header-section-number">6.2</span> UMAP Plot - Sex Comparison</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/UMAP Plot - Sex Comparison.png" class="img-fluid figure-img"></p>
@@ -232,8 +231,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p>This UMAP plot provides another view of sample clustering. It shows slightly clearer grouping patterns than PCA, which suggests that some nonlinear structure exists in the data, although the groups are still not perfectly separated.</p>
 </section>
-<section id="volcano-plot---female-vs-male-dcm" class="level3">
-<h3 class="anchored" data-anchor-id="volcano-plot---female-vs-male-dcm">Volcano Plot - Female vs Male DCM</h3>
+<section id="volcano-plot---female-vs-male-dcm" class="level3" data-number="6.3">
+<h3 data-number="6.3" class="anchored" data-anchor-id="volcano-plot---female-vs-male-dcm"><span class="header-section-number">6.3</span> Volcano Plot - Female vs Male DCM</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/Volcano Plot - Female vs Male DCM.png" class="img-fluid figure-img"></p>
@@ -242,8 +241,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p>This volcano plot highlights genes that differ significantly between female and male DCM samples. It suggests that sex-specific gene expression differences are present in diseased hearts.</p>
 </section>
-<section id="volcano-plot---female-vs-male-control" class="level3">
-<h3 class="anchored" data-anchor-id="volcano-plot---female-vs-male-control">Volcano Plot - Female vs Male Control</h3>
+<section id="volcano-plot---female-vs-male-control" class="level3" data-number="6.4">
+<h3 data-number="6.4" class="anchored" data-anchor-id="volcano-plot---female-vs-male-control"><span class="header-section-number">6.4</span> Volcano Plot - Female vs Male Control</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/Volcano Plot - Female vs Male control.png" class="img-fluid figure-img"></p>
@@ -252,8 +251,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p>This volcano plot compares female and male control samples. Fewer gene differences are seen here compared to the DCM comparison, suggesting that sex effects are more noticeable in disease than in healthy tissue.</p>
 </section>
-<section id="pc1-distribution" class="level3">
-<h3 class="anchored" data-anchor-id="pc1-distribution">PC1 Distribution</h3>
+<section id="pc1-distribution" class="level3" data-number="6.5">
+<h3 data-number="6.5" class="anchored" data-anchor-id="pc1-distribution"><span class="header-section-number">6.5</span> PC1 Distribution</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/PC1 Distribution by Group.png" class="img-fluid figure-img"></p>
@@ -263,17 +262,17 @@ ul.task-list li input[type="checkbox"] {
 <p>This plot shows the distribution of PC1 values by group. It helps summarize how much of the major variation in the dataset is associated with differences between controls and DCM samples.</p>
 </section>
 </section>
-<section id="kegg-pathway-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="kegg-pathway-analysis">KEGG Pathway Analysis</h2>
+<section id="kegg-pathway-analysis" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="kegg-pathway-analysis"><span class="header-section-number">7</span> KEGG Pathway Analysis</h2>
 <p>KEGG enrichment analysis was performed on significantly differentially expressed genes to understand biological pathways involved in sex differences in DCM.</p>
-<section id="kegg-summary-barplot" class="level3">
-<h3 class="anchored" data-anchor-id="kegg-summary-barplot">KEGG Summary Barplot</h3>
+<section id="kegg-summary-barplot" class="level3" data-number="7.1">
+<h3 data-number="7.1" class="anchored" data-anchor-id="kegg-summary-barplot"><span class="header-section-number">7.1</span> KEGG Summary Barplot</h3>
 <p>KEGG</p>
 <p>Barplot showing enriched pathways related to inflammation and metabolic processes in male vs female DCM samples.</p>
 </section>
 </section>
-<section id="key-findings" class="level2">
-<h2 class="anchored" data-anchor-id="key-findings">Key Findings</h2>
+<section id="key-findings" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="key-findings"><span class="header-section-number">8</span> Key Findings</h2>
 <ul>
 <li>DCM samples separate clearly from controls in PCA and UMAP</li>
 <li>There are noticeable gene expression differences between male and female DCM hearts</li>
@@ -282,16 +281,16 @@ ul.task-list li input[type="checkbox"] {
 <li>These results suggest sex-specific biological differences in DCM progression</li>
 </ul>
 </section>
-<section id="discussion" class="level2">
-<h2 class="anchored" data-anchor-id="discussion">Discussion</h2>
+<section id="discussion" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="discussion"><span class="header-section-number">9</span> Discussion</h2>
 <p>The results from this analysis show that gene expression patterns in DCM differ from non-failing hearts, although the separation is not completely clear. In the PCA plot, there is some overlap between groups, which suggests that disease status is not the only factor influencing gene expression. This makes sense given how complex DCM is and how much variability exists between patients.</p>
 <p>The UMAP plot shows slightly clearer clustering compared to PCA, which suggests that there may be nonlinear patterns in the data that PCA is not capturing as well. Even so, the groups are still not perfectly separated, reinforcing the idea that multiple factors are contributing to the observed variation.</p>
 <p>The differential expression results highlight genes that are upregulated and downregulated in DCM. Many of these genes are likely involved in processes such as inflammation and cardiac remodeling, which are commonly associated with heart failure. This aligns with what is already known about the disease.</p>
 <p>There also appear to be differences between male and female samples, although these differences are not extremely distinct. This suggests that sex may play a role in how DCM develops or progresses, but it is probably not the only factor. More focused analysis would be needed to better understand these differences.</p>
 <p>Overall, the results suggest that DCM is associated with measurable changes in gene expression, but the patterns are complex and not driven by a single variable. This highlights the importance of considering multiple biological and clinical factors when studying the disease.</p>
 </section>
-<section id="tools-used" class="level2">
-<h2 class="anchored" data-anchor-id="tools-used">Tools Used</h2>
+<section id="tools-used" class="level2" data-number="10">
+<h2 data-number="10" class="anchored" data-anchor-id="tools-used"><span class="header-section-number">10</span> Tools Used</h2>
 <ul>
 <li>R</li>
 <li>GEOquery</li>
@@ -302,8 +301,8 @@ ul.task-list li input[type="checkbox"] {
 <li>data.table</li>
 </ul>
 </section>
-<section id="limitations" class="level2">
-<h2 class="anchored" data-anchor-id="limitations">Limitations</h2>
+<section id="limitations" class="level2" data-number="11">
+<h2 data-number="11" class="anchored" data-anchor-id="limitations"><span class="header-section-number">11</span> Limitations</h2>
 <ul>
 <li>This analysis uses bulk RNA-seq data, so it doesn’t tell us which specific cell types the gene expression changes are coming from</li>
 <li>There is a lot of variability between patients (like disease stage or treatment history), and that isn’t fully accounted for here</li>
@@ -311,12 +310,12 @@ ul.task-list li input[type="checkbox"] {
 <li>All results are based on a single dataset, so they would need to be validated using additional datasets to confirm the findings</li>
 </ul>
 </section>
-<section id="conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<section id="conclusion" class="level2" data-number="12">
+<h2 data-number="12" class="anchored" data-anchor-id="conclusion"><span class="header-section-number">12</span> Conclusion</h2>
 <p>This study demonstrates that DCM is associated with meaningful transcriptomic changes, particularly in pathways related to inflammation and remodeling. The observed sex-specific differences suggest that personalized approaches may be important in understanding and treating the disease.</p>
 </section>
-<section id="authors" class="level2">
-<h2 class="anchored" data-anchor-id="authors">Authors</h2>
+<section id="authors" class="level2" data-number="13">
+<h2 data-number="13" class="anchored" data-anchor-id="authors"><span class="header-section-number">13</span> Authors</h2>
 <p>Vaishnavi Madagiri<br>
 Bioinformatics Major — Virginia Commonwealth University</p>
 <p>Ammar Mohiuddin<br>
