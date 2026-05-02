@@ -2,6 +2,16 @@
 title: "RNAseq Analysis using GSE141910"
 subtitle: "Exploring gene expression differences in dilated cardiomyopathy (DCM) with a focus on sex-specific effects"
 ---
+## Abstract
+
+Dilated cardiomyopathy (DCM) is a complex cardiovascular disease characterized by ventricular dilation and reduced cardiac function, often progressing to heart failure @hershberger2013. While gene expression changes in DCM have been widely studied, the role of biological sex in influencing these patterns remains less understood @regitz2012. 
+
+In this study, we performed RNA sequencing (RNA-seq) analysis to investigate differences in gene expression and molecular pathways between male and female DCM samples compared to non-failing controls. Using publicly available datasets, we applied dimensionality reduction techniques, differential expression analysis, and pathway enrichment methods to identify key biological trends.
+
+Our results indicate that disease status has a stronger effect on gene expression than sex alone, with clear separation between DCM and control samples observed in PCA and UMAP analyses. Although sex-based differences were present, they were more subtle and became more noticeable under disease conditions. Pathway analysis suggested involvement of inflammatory signaling, metabolic dysregulation, and cardiac remodeling processes, which are commonly associated with heart failure.
+
+Overall, this study highlights the importance of considering both disease state and biological sex in transcriptomic analyses of cardiomyopathy, and suggests that sex-specific mechanisms may contribute to variability in disease progression and treatment outcomes.
+
 
 ## Introduction
 
