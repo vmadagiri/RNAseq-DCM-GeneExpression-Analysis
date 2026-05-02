@@ -1,0 +1,61 @@
+---
+title: "Proposal"
+---
+
+# Proposal
+
+##  Research question
+
+How does gene expression differ between male and female patients with dilated cardiomyopathy (DCM), and which biological pathways are most affected?
+
+---
+
+##  Dataset
+
+- **Source:** Gene Expression Omnibus (GEO), dataset  [GSE141910](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE141910) 
+- **Dataset description:** RNA sequencing of left ventricle tissue from non-failing donors and heart failure samples from the MAGNet consortium  
+- **Sample size:** 305 total samples  
+  - Non-failing: 152 samples  
+    - 70 males  
+    - 82 females  
+  - DCM: 153 samples  
+    - 92 males  
+    - 61 females  
+- **Key variables:** Sex, disease condition, and RNA-seq gene expression levels  
+- **License/usage notes:** Publicly available dataset for research use through GEO  
+
+---
+
+##  Planned analysis
+
+The analysis pipeline includes:
+
+- Filtering low-count genes  
+- Log transformation of counts  
+- Principal Component Analysis (PCA)  
+- UMAP clustering  
+- Differential gene expression analysis using limma  
+- Volcano plot visualization  
+- Sex-based comparison of DCM samples  
+- KEGG pathway enrichment analysis  
+
+---
+
+##  Expected visualizations
+
+- PCA plot comparing control and DCM samples by sex  
+- UMAP plot showing nonlinear clustering patterns  
+- Volcano plot comparing female vs male DCM samples  
+- Volcano plot comparing female vs male control samples  
+- PC1 distribution plot showing major variation across groups  
+- KEGG pathway summary plot for Female DCM vs Male DCM  
+
+---
+
+##  Deliverables
+
+- A Quarto website presenting the project results  
+- Figures including PCA, UMAP, volcano plots, PC1 distribution, and KEGG pathway plot  
+- Summary of key gene expression differences  
+- Interpretation of sex-specific differences in DCM  
+- Discussion of limitations and biological meaning  

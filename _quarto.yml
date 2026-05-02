@@ -1,18 +1,25 @@
 project:
   type: website
+  output-dir: docs
+
+bibliography: references.bib
 
 website:
-  title: "RNAseq-DCM-GeneExpression-Analysis"
+  title: "RNA-seq Analysis of Dilated Cardiomyopathy"
+  
   navbar:
-    background: white
     left:
-      - text: Home
-        file: index.qmd
-      - text: About
-        file: about.qmd
-    right:
-      - icon: github
-        href: https://github.com/Haneia/dcm-gene-expression-analysis
+      - href: index.qmd
+        text: Home
+      - href: proposal.qmd
+        text: Proposal
+      - href: results.qmd
+        text: Results
+      - href: team.qmd
+        text: Team
+  page-footer:
+    left: "BNFO 420 • VCU"
+    right: "Built with Quarto"
 
 format:
   html:
@@ -20,3 +27,7 @@ format:
     toc: true
     number-sections: true
 
+execute:
+  echo: true
+  warning: false
+  message: false
