@@ -1,0 +1,10 @@
+---
+title: "Team"
+---
+
+## Members
+- Vaishnavi Madagiri- EDA, Data cleaning 
+- Ammar Mohiuddin - Writting
+- Harrish Ganesh - EDA, Data cleaning 
+- Haneia Nemati - Modeling
+

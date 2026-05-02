@@ -1,0 +1,235 @@
+---
+title: "Results"
+---
+
+```{r setup-results, include=FALSE, message=FALSE, warning=FALSE}
+library(plotly)
+
+source("sex_comparison_analysis copy.R")
+source("Fresh_KEGG_Analysis copy.R")
+```
+
+# Results
+
+## Key findings
+
+- DCM samples show stronger gene expression differences than sex alone.
+- Sex differences are present but more noticeable in DCM samples.
+- PCA and UMAP show partial clustering between groups.
+- KEGG analysis highlights pathways related to inflammation and metabolism.
+
+---
+
+## Visualizations
+
+## PCA Plot - Sex Comparison
+
+```{r pca-plot, echo=FALSE, message=FALSE, warning=FALSE}
+plot_ly(
+  x = pca$x[,1],
+  y = pca$x[,2],
+  type = "scatter",
+  mode = "markers",
+  color = meta_sex$Group,
+  colors = group_colors,
+  text = paste(
+    "Sample:", meta_sex$Sample,
+    "<br>Group:", meta_sex$Group,
+    "<br>Sex:", meta_sex$Sex,
+    "<br>Condition:", meta_sex$Condition
+  ),
+  hoverinfo = "text"
+) %>%
+  layout(
+    title = "PCA Plot - Sex Comparison",
+    xaxis = list(title = paste0("PC1 (", pc1_var, "%)")),
+    yaxis = list(title = paste0("PC2 (", pc2_var, "%)"))
+  )
+```
+
+This PCA plot compares control and DCM samples by sex. Each point is one sample. The plot shows some separation between disease groups, but there is still overlap, meaning sex-specific differences are present but not the only factor affecting gene expression.
+
+---
+
+## UMAP Plot - Sex Comparison
+
+```{r umap-plot, echo=FALSE, message=FALSE, warning=FALSE}
+plot_ly(
+  x = ump$layout[,1],
+  y = ump$layout[,2],
+  type = "scatter",
+  mode = "markers",
+  color = meta_sex$Group,
+  colors = group_colors,
+  text = paste(
+    "Sample:", meta_sex$Sample,
+    "<br>Group:", meta_sex$Group,
+    "<br>Sex:", meta_sex$Sex,
+    "<br>Condition:", meta_sex$Condition
+  ),
+  hoverinfo = "text"
+) %>%
+  layout(
+    title = "UMAP Plot - Sex Comparison",
+    xaxis = list(title = "UMAP1"),
+    yaxis = list(title = "UMAP2")
+  )
+```
+
+This UMAP plot provides another view of sample clustering. It shows nonlinear patterns in the data that PCA may not capture as clearly. The groups are not perfectly separated, which suggests that multiple biological factors are influencing the expression patterns.
+
+---
+
+## Volcano Plot - Female vs Male DCM
+
+```{r volcano-dcm-plot, echo=FALSE, message=FALSE, warning=FALSE}
+plot_ly(
+  data = volcano_dcm_df,
+  x = ~logFC,
+  y = ~plotNegLogP,
+  type = "scatter",
+  mode = "markers",
+  color = ~Significance,
+  colors = c(
+    "Female Higher" = "deeppink",
+    "Male Higher" = "blue",
+    "Not Significant" = "grey"
+  ),
+  text = paste(
+    "Gene:", rownames(volcano_dcm_df),
+    "<br>logFC:", round(volcano_dcm_df$logFC, 3),
+    "<br>P-value:", signif(volcano_dcm_df$P.Value, 3),
+    "<br>Status:", volcano_dcm_df$Significance
+  ),
+  hoverinfo = "text"
+) %>%
+  layout(
+    title = "Volcano Plot - Female vs Male DCM",
+    xaxis = list(title = "log Fold Change (Female vs Male)"),
+    yaxis = list(title = "-log10 P-value")
+  )
+```
+
+This volcano plot compares female and male DCM samples. Points farther left or right show stronger sex-based expression differences. Colored points represent genes that are higher in females or higher in males, suggesting that DCM may affect gene expression differently by sex.
+
+---
+
+## Volcano Plot - Female vs Male Control
+
+```{r volcano-control-plot, echo=FALSE, message=FALSE, warning=FALSE}
+plot_ly(
+  data = volcano_control_df,
+  x = ~logFC,
+  y = ~plotNegLogP,
+  type = "scatter",
+  mode = "markers",
+  color = ~Significance,
+  colors = c(
+    "Female Higher" = "deeppink",
+    "Male Higher" = "blue",
+    "Not Significant" = "grey"
+  ),
+  text = paste(
+    "Gene:", rownames(volcano_control_df),
+    "<br>logFC:", round(volcano_control_df$logFC, 3),
+    "<br>P-value:", signif(volcano_control_df$P.Value, 3),
+    "<br>Status:", volcano_control_df$Significance
+  ),
+  hoverinfo = "text"
+) %>%
+  layout(
+    title = "Volcano Plot - Female vs Male Control",
+    xaxis = list(title = "log Fold Change (Female vs Male)"),
+    yaxis = list(title = "-log10 P-value")
+  )
+```
+
+This volcano plot compares female and male control samples. Compared to the DCM volcano plot, fewer strong differences are expected here. This supports the idea that sex-based gene expression differences may become more noticeable in disease.
+
+---
+
+## PC1 Distribution
+
+```{r pc1-plot, echo=FALSE, message=FALSE, warning=FALSE}
+plot_ly(
+  data = pc1_df,
+  x = ~Group,
+  y = ~PC1,
+  color = ~Group,
+  colors = group_colors,
+  type = "box",
+  boxpoints = "all",
+  jitter = 0.3,
+  pointpos = 0
+) %>%
+  layout(
+    title = "PC1 Distribution by Group",
+    xaxis = list(title = ""),
+    yaxis = list(title = "PC1 Score")
+  )
+```
+
+This boxplot shows how PC1 values are distributed across each group. PC1 represents the largest source of variation in the dataset. Differences between groups suggest that disease status and sex may contribute to major gene expression variation.
+
+---
+
+## KEGG Pathway Analysis
+
+KEGG enrichment analysis was performed on significantly differentially expressed genes to understand biological pathways involved in sex differences in DCM.
+
+## KEGG Summary Plot - Female DCM vs Male DCM
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+invisible(capture.output(
+  suppressWarnings(
+    source("Fresh_KEGG_Analysis copy.R")
+  )
+))
+
+if ("P.Value" %in% colnames(results) && nrow(results) > 0) {
+  
+  kegg_plot_df <- results[order(results$P.Value), ]
+  kegg_plot_df <- head(kegg_plot_df, 15)
+  
+  kegg_plot_df$GeneRatio <- as.numeric(kegg_plot_df$GeneRatio)
+  kegg_plot_df$SignificantGenesInPathway <- as.numeric(kegg_plot_df$SignificantGenesInPathway)
+  kegg_plot_df$adj.P.Val <- as.numeric(kegg_plot_df$adj.P.Val)
+  kegg_plot_df$PathwayName <- as.character(kegg_plot_df$PathwayName)
+  
+  plot_ly(
+    data = kegg_plot_df,
+    x = ~GeneRatio,
+    y = ~PathwayName,
+    type = "scatter",
+    mode = "markers",
+    size = ~SignificantGenesInPathway,
+    color = ~adj.P.Val,
+    colors = "RdBu",
+    text = paste(
+      "Pathway:", kegg_plot_df$PathwayName,
+      "<br>Gene Ratio:", round(kegg_plot_df$GeneRatio, 3),
+      "<br>Significant Genes:", kegg_plot_df$SignificantGenesInPathway,
+      "<br>P-value:", signif(kegg_plot_df$P.Value, 3),
+      "<br>Adjusted P-value:", signif(kegg_plot_df$adj.P.Val, 3)
+    ),
+    hoverinfo = "text"
+  ) %>%
+    layout(
+      title = "KEGG Pathway Enrichment: Female DCM vs Male DCM",
+      xaxis = list(title = "Gene Ratio"),
+      yaxis = list(title = "KEGG Pathway")
+    )
+  
+} else {
+  cat("No KEGG pathways were available to plot.")
+}
+```
+
+This interactive KEGG plot shows the top enriched pathways from the Female DCM vs Male DCM comparison. Larger points represent pathways with more significant genes, and the color represents the adjusted p-value. This helps connect gene expression differences to larger biological pathways.
+
+---
+
+## Interpretation
+
+Overall, the results suggest that DCM is associated with meaningful gene expression changes. Sex-specific differences are present, especially in DCM samples, but they are not the only factor driving variation. The KEGG pathway results help connect these gene-level differences to broader biological processes such as inflammation, metabolism, and cardiac remodeling.
+
