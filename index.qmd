@@ -16,15 +16,7 @@ This project uses RNA-seq data to compare gene expression in DCM and non-failing
 
 ---
 
-## References
 
-Hershberger, R. E., Hedges, D. J., & Morales, A. (2013). *[Dilated cardiomyopathy: The complexity of a diverse genetic architecture](https://doi.org/10.1038/nrcardio.2013.105).* Nature Reviews Cardiology, 10(9), 531–547.
-
-Margulies, K. B., Hernandez, A. F., Redfield, M. M., et al. (2016). *[Effects of liraglutide on clinical stability among patients with advanced heart failure and reduced ejection fraction](https://jamanetwork.com/journals/jama/fullarticle/2540504).* JAMA, 316(5), 500–508.
-
-McKenna, W. J., Maron, B. J., & Thiene, G. (2017). *[Classification, epidemiology, and global burden of cardiomyopathies](https://doi.org/10.1161/CIRCRESAHA.117.309711).* Circulation Research, 121(7), 722–730.
-
-Regitz-Zagrosek, V. (2012). *[Sex and gender differences in health](https://doi.org/10.1038/embor.2012.87).* EMBO Reports, 13(7), 596–603.
 
 ## Research Question
 
